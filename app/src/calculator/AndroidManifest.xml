@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <application
+        android:label="Máy Tính"
+        tools:replace="android:label">
+
+        <!-- Chỉ có Calculator Activity duy nhất -->
+        <activity
+            android:name=".ui.CalculatorActivity"
+            android:exported="true"
+            android:label="Máy Tính"
+            android:theme="@style/Theme.MyApplication.AppCompat"
+            tools:replace="android:exported,android:label" />
+
+        <!-- Remove other activities -->
+        <activity android:name=".MenuActivity" tools:node="remove" />
+        <activity android:name=".MainActivity" tools:node="remove" />
+        <activity android:name=".ui.GalleryActivity" tools:node="remove" />
+        <activity android:name=".ui.WeatherActivity" tools:node="remove" />
+        <activity android:name=".ui.WeatherDetailActivity" tools:node="remove" />
+        <activity android:name=".ui.TaskActivity" tools:node="remove" />
+        <activity android:name=".ui.ContactListActivity" tools:node="remove" />
+        <activity android:name=".ui.MessageScreenActivity" tools:node="remove" />
+    </application>
+</manifest>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <application
+        android:label="Thời Tiết"
+        tools:replace="android:label">
+
+        <!-- Chỉ có Weather Activity -->
+        <activity
+            android:name=".ui.WeatherActivity"
+            android:exported="true"
+            android:label="Thời Tiết"
+            android:theme="@style/Theme.MyApplication.AppCompat"
+            tools:replace="android:exported,android:label" />
+
+        <!-- Keep WeatherDetailActivity for navigation -->
+        <activity
+            android:name=".ui.WeatherDetailActivity"
+            android:exported="false"
+            android:label="Chi tiết thời tiết"
+            android:theme="@style/Theme.MyApplication.AppCompat" />
+
+        <!-- Remove other activities -->
+        <activity android:name=".MenuActivity" tools:node="remove" />
+        <activity android:name=".MainActivity" tools:node="remove" />
+        <activity android:name=".ui.CalculatorActivity" tools:node="remove" />
+        <activity android:name=".ui.GalleryActivity" tools:node="remove" />
+        <activity android:name=".ui.TaskActivity" tools:node="remove" />
+        <activity android:name=".ui.ContactListActivity" tools:node="remove" />
+        <activity android:name=".ui.MessageScreenActivity" tools:node="remove" />
+    </application>
+</manifest>
+
